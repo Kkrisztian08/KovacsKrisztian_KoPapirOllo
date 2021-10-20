@@ -54,24 +54,27 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:text="KŐ"
             android:id="@+id/btn_ko"
-            android:layout_weight="1"/>
-
+            android:layout_weight="1"
+            android:background="@drawable/rock"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:text="PAPÍR"
             android:id="@+id/btn_papir"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/paper"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:text="OLLÓ"
             android:id="@+id/btn_ollo"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:foregroundTint="@color/black"
+            android:background="@drawable/scissors" />
 
     </LinearLayout>
 
