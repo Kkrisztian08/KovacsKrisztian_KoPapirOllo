@@ -16,9 +16,9 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     private ImageView gepTippKep, sajatTippKep;
     private Button gombKo, gombPapir, gombOllo;
-    private TextView eredmeny;
+    private TextView eredmeny , dontetlen;
     private int sajatTipp, gepTipp;
-    private int sajatPont, gepPont;
+    private int sajatPont, gepPont, dontetlenSzám;
     int randomKPO;
 
     @Override
@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
             eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
         }else{
             Toast.makeText(MainActivity.this,"Döntetlen",Toast.LENGTH_SHORT).show();
+            dontetlenSzám++;
+            dontetlen.setText("Döntetlenek számar: "+dontetlenSzám);
         }
 
         if (gepPont == 3 || sajatPont==3) {
@@ -130,21 +132,23 @@ public class MainActivity extends AppCompatActivity {
     public void ujJatek() {
         sajatPont = 0;
         gepPont = 0;
+        dontetlenSzám=0;
         sajatTippKep.setImageResource(R.drawable.rock);
         gepTippKep.setImageResource(R.drawable.rock);
         eredmeny.setText("Eredmeny: Ember: 0 Computer: 0");
-
+        dontetlen.setText("Döntetlenek számar: 0");
     }
-
 
     private void init() {
         gepPont=0;
         sajatPont=0;
+        dontetlenSzám=0;
         gepTippKep=findViewById(R.id.img_gep);
         sajatTippKep=findViewById(R.id.img_sajat);
         gombKo=findViewById(R.id.btn_ko);
         gombPapir=findViewById(R.id.btn_papir);
         gombOllo=findViewById(R.id.btn_ollo);
         eredmeny=findViewById(R.id.textView_eredmeny);
+        dontetlen=findViewById(R.id.textView_dontetlen);
     }
 }

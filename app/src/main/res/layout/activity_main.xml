@@ -8,6 +8,13 @@
     android:orientation="vertical">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:text="Döntetlenek számar: 0"
+        android:id="@+id/textView_dontetlen"/>
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -73,7 +80,6 @@
             android:text="OLLÓ"
             android:id="@+id/btn_ollo"
             android:layout_weight="1"
-            android:foregroundTint="@color/black"
             android:background="@drawable/scissors" />
 
     </LinearLayout>
