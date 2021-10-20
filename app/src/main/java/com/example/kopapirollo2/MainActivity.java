@@ -10,12 +10,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     private ImageView gepTippKep, sajatTippKep;
     private Button gombKo, gombPapir, gombOllo;
     private TextView eredmeny;
-    private String sajatTipp;
+    private String sajatTipp, gepTipp;
     private int emberPont, gepPont;
+    private Random rnd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +29,32 @@ public class MainActivity extends AppCompatActivity {
         gombKo.setOnClickListener((view) -> {
             if (emberPont != 5 || gepPont != 5) {
                 sajatTipp = "kő";
+                sajatTippKep.setImageResource(R.drawable.rock);
             }
         });
         gombPapir.setOnClickListener((view) -> {
             if (emberPont != 5 || gepPont != 5) {
                 sajatTipp = "papír";
+                sajatTippKep.setImageResource(R.drawable.paper);
             }
         });
         gombOllo.setOnClickListener((view) -> {
             if (emberPont != 5 || gepPont != 5) {
                 sajatTipp = "olló";
+                sajatTippKep.setImageResource(R.drawable.scissors);
             }
         });
     }
     public void jatek(){
+        int random = rnd.nextInt((3) + 1) + 1;
+        if (random==1){
+            gepTippKep.setImageResource(R.drawable.rock);
+        }
+        else if (random == 2) {
+            gepTippKep.setImageResource(R.drawable.paper);
+        }else{
+            gepTippKep.setImageResource(R.drawable.scissors);
+        }
 
     }
 
