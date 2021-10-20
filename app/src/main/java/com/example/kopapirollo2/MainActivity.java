@@ -27,19 +27,19 @@ public class MainActivity extends AppCompatActivity {
         init();
 
         gombKo.setOnClickListener((view) -> {
-            if (emberPont != 5 || gepPont != 5) {
+            if (emberPont != 3 || gepPont != 3) {
                 sajatTipp = "kő";
                 sajatTippKep.setImageResource(R.drawable.rock);
             }
         });
         gombPapir.setOnClickListener((view) -> {
-            if (emberPont != 5 || gepPont != 5) {
+            if (emberPont != 3 || gepPont != 3) {
                 sajatTipp = "papír";
                 sajatTippKep.setImageResource(R.drawable.paper);
             }
         });
         gombOllo.setOnClickListener((view) -> {
-            if (emberPont != 5 || gepPont != 5) {
+            if (emberPont != 3 || gepPont != 3) {
                 sajatTipp = "olló";
                 sajatTippKep.setImageResource(R.drawable.scissors);
             }
@@ -49,11 +49,14 @@ public class MainActivity extends AppCompatActivity {
         int random = rnd.nextInt((3) + 1) + 1;
         if (random==1){
             gepTippKep.setImageResource(R.drawable.rock);
+            gepTipp="kő";
         }
         else if (random == 2) {
             gepTippKep.setImageResource(R.drawable.paper);
+            gepTipp="papír";
         }else{
             gepTippKep.setImageResource(R.drawable.scissors);
+            gepTipp="olló";
         }
 
     }
