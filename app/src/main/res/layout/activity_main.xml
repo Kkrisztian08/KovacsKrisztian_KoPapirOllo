@@ -7,22 +7,10 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@+id/fej"
-        android:src="@drawable/rock"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="A te választásod"
-        android:id="@+id/textView_sajat"/>
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:id="@+id/img_gep"
         android:src="@drawable/rock"/>
@@ -30,17 +18,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="40dp"
         android:text="A gép választása"
         android:layout_gravity="center"
         android:id="@+id/textView_gep"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:id="@+id/img_sajat"
+        android:src="@drawable/rock"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textSize="40dp"
+        android:text="A te választásod"
+        android:id="@+id/textView_sajat"/>
 
-        android:text="Eredmeny: Ember 0 Computer:0"
-        android:id="@+id/textView_dobasok"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:text="Eredmeny: Ember: 0 Computer: 0"
+        android:id="@+id/textView_eredmeny"/>
 
 
 
