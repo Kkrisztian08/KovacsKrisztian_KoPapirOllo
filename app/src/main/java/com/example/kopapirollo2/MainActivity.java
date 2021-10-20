@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button gombKo, gombPapir, gombOllo;
     private TextView eredmeny , dontetlen;
     private int sajatTipp, gepTipp;
-    private int sajatPont, gepPont, dontetlenSzám;
+    private int sajatPont, gepPont, dontetlenSzam;
     int randomKPO;
 
     @Override
@@ -93,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
             eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
         }else{
             Toast.makeText(MainActivity.this,"Döntetlen",Toast.LENGTH_SHORT).show();
-            dontetlenSzám++;
-            dontetlen.setText("Döntetlenek számar: "+dontetlenSzám);
+            dontetlenSzam++;
+            dontetlen.setText("Döntetlenek számar: "+dontetlenSzam);
         }
 
         if (gepPont == 3 || sajatPont==3) {
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     public void ujJatek() {
         sajatPont = 0;
         gepPont = 0;
-        dontetlenSzám=0;
+        dontetlenSzam=0;
         sajatTippKep.setImageResource(R.drawable.rock);
         gepTippKep.setImageResource(R.drawable.rock);
         eredmeny.setText("Eredmeny: Ember: 0 Computer: 0");
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         gepPont=0;
         sajatPont=0;
-        dontetlenSzám=0;
+        dontetlenSzam=0;
         gepTippKep=findViewById(R.id.img_gep);
         sajatTippKep=findViewById(R.id.img_sajat);
         gombKo=findViewById(R.id.btn_ko);
