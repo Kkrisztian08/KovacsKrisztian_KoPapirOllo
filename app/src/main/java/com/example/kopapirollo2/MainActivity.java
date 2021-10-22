@@ -14,9 +14,9 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    private ImageView gepTippKep, sajatTippKep;
+    private ImageView gepTippKep, sajatTippKep, gepHP1,gepHP2,gepHP3,sajatHP1,sajatHP2,sajatHP3;
     private Button gombKo, gombPapir, gombOllo;
-    private TextView eredmeny , dontetlen;
+    private TextView dontetlen;
     private int sajatTipp, gepTipp;
     private int sajatPont, gepPont, dontetlenSzam;
     int randomKPO;
@@ -70,32 +70,42 @@ public class MainActivity extends AppCompatActivity {
         if (gepTipp==0 && sajatTipp==1) {
             sajatPont++;
             Toast.makeText(MainActivity.this, "A kör nyertese: TE", Toast.LENGTH_SHORT).show();
-            eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
-        }else if (gepTipp == 0 && sajatTipp==2) {
+        }else if (gepTipp == 2 && sajatTipp==0) {
             sajatPont++;
             Toast.makeText(MainActivity.this, "A kör nyertese: TE", Toast.LENGTH_SHORT).show();
-            eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
         }else if (gepTipp == 1 && sajatTipp==2) {
             sajatPont++;
             Toast.makeText(MainActivity.this, "A kör nyertese: TE", Toast.LENGTH_SHORT).show();
-            eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
         }else if (gepTipp == 1 && sajatTipp==0) {
             gepPont++;
             Toast.makeText(MainActivity.this, "A kör nyertese: A GÉP", Toast.LENGTH_SHORT).show();
-            eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
         }else if (gepTipp == 2 && sajatTipp==1) {
             gepPont++;
             Toast.makeText(MainActivity.this, "A kör nyertese: A GÉP", Toast.LENGTH_SHORT).show();
-            eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
-        }else if (gepTipp == 2 && sajatTipp==0) {
+        }else if (gepTipp == 0 && sajatTipp==2) {
             gepPont++;
             Toast.makeText(MainActivity.this, "A kör nyertese: A GÉP", Toast.LENGTH_SHORT).show();
-            eredmeny.setText("Eredmeny: Ember: " + sajatPont +" Computer: "+ gepPont);
         }else{
             Toast.makeText(MainActivity.this,"Döntetlen",Toast.LENGTH_SHORT).show();
             dontetlenSzam++;
-            dontetlen.setText("Döntetlenek számar: "+dontetlenSzam);
+            dontetlen.setText("Döntetlenek száma: "+dontetlenSzam);
         }
+
+        if (gepPont == 1) {
+            sajatHP1.setImageResource(R.drawable.heart1);
+        }else if (gepPont == 2) {
+            sajatHP2.setImageResource(R.drawable.heart1);
+        }else if (gepPont == 3) {
+            sajatHP3.setImageResource(R.drawable.heart1);
+        }
+        if (sajatPont == 1) {
+            gepHP3.setImageResource(R.drawable.heart1);
+        }else if (sajatPont == 2) {
+            gepHP2.setImageResource(R.drawable.heart1);
+        }else if (sajatPont == 3) {
+            gepHP1.setImageResource(R.drawable.heart1);
+        }
+
 
         if (gepPont == 3 || sajatPont==3) {
             jatekVege();
@@ -136,8 +146,14 @@ public class MainActivity extends AppCompatActivity {
         dontetlenSzam=0;
         sajatTippKep.setImageResource(R.drawable.rock);
         gepTippKep.setImageResource(R.drawable.rock);
-        eredmeny.setText("Eredmeny: Ember: 0 Computer: 0");
-        dontetlen.setText("Döntetlenek számar: 0");
+        gepHP1.setImageResource(R.drawable.heart2);
+        gepHP2.setImageResource(R.drawable.heart2);
+        gepHP3.setImageResource(R.drawable.heart2);
+        sajatHP1.setImageResource(R.drawable.heart2);
+        sajatHP2.setImageResource(R.drawable.heart2);
+        sajatHP3.setImageResource(R.drawable.heart2);
+        dontetlen.setText("Döntetlenek száma: 0");
+
     }
 
     private void init() {
@@ -149,7 +165,12 @@ public class MainActivity extends AppCompatActivity {
         gombKo=findViewById(R.id.btn_ko);
         gombPapir=findViewById(R.id.btn_papir);
         gombOllo=findViewById(R.id.btn_ollo);
-        eredmeny=findViewById(R.id.textView_eredmeny);
         dontetlen=findViewById(R.id.textView_dontetlen);
+        gepHP1=findViewById(R.id.gephp1);
+        gepHP2=findViewById(R.id.gephp2);
+        gepHP3=findViewById(R.id.gephp3);
+        sajatHP1=findViewById(R.id.jatekoshp1);
+        sajatHP2=findViewById(R.id.jatekoshp2);
+        sajatHP3=findViewById(R.id.jatekoshp3);
     }
 }

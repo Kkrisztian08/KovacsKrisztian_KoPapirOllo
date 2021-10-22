@@ -11,20 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/gephp1"
             android:src="@drawable/heart2"
             />
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/gephp2"
             android:src="@drawable/heart2"
             />
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/gephp3"
             android:src="@drawable/heart2"
             />
@@ -35,7 +35,7 @@
             android:textSize="25dp"
             android:text="Gép"
             android:id="@+id/textView_gepelet"
-            android:layout_marginRight="140dp"/>
+            android:layout_marginRight="95dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,20 +44,20 @@
             android:text="Játékos"
             android:id="@+id/textView_Jatekoselet"/>
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/jatekoshp1"
             android:src="@drawable/heart2"
             />
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/jatekoshp2"
             android:src="@drawable/heart2"
             />
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/jatekoshp3"
             android:src="@drawable/heart2"
             />
@@ -67,12 +67,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="25dp"
-        android:text="Döntetlenek számar: 0"
+        android:textSize="35dp"
+        android:text="Döntetlenek száma: 0"
         android:id="@+id/textView_dontetlen"/>
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_gravity="center"
         android:id="@+id/img_gep"
         android:src="@drawable/rock"/>
@@ -86,8 +86,8 @@
         android:id="@+id/textView_gep"/>
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_gravity="center"
         android:id="@+id/img_sajat"
         android:src="@drawable/rock"/>
@@ -99,16 +99,6 @@
         android:textSize="40dp"
         android:text="A te választásod"
         android:id="@+id/textView_sajat"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25dp"
-        android:text="Eredmeny: Ember: 0 Computer: 0"
-        android:id="@+id/textView_eredmeny"/>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
